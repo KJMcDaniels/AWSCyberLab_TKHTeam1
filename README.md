@@ -12,6 +12,7 @@ This document serves as a guide for setting up a multi-subnet cybersecurity trai
 ### AWS Account Preparation
 
 - **Account Creation:** Ensure that you have an AWS account created and you're able to access the AWS Management Console.
+    - You can find detailed instructions to do so in the [AWS Account Creation Guide](/assets/docs/AWS-Account-Creation.md)
 - **IAM Roles and Policies:** Set up IAM roles with appropriate policies to provide your team with necessary access levels.
 
 ### Environment Setup
@@ -23,8 +24,25 @@ This document serves as a guide for setting up a multi-subnet cybersecurity trai
 
 ### VPC Creation
 
-1. Design the CIDR blocks for your VPC and subnets.
-2. Navigate to the VPC dashboard and create a new VPC.
+#### 1. Design the CIDR blocks for your VPC and subnets
+
+- **Determine CIDR for VPC**: Choose a CIDR block for the VPC. A common practice is to use a `/16` CIDR block (e.g., `10.0.0.0/16`) to provide ample IP addresses for lab scenarios.
+- **Plan Subnets**: Divide the VPC CIDR block into smaller CIDR blocks for each subnet. Planning might include a public subnet for internet-facing resources and private subnets for backend systems. For example:
+  - Public Subnet: `10.0.1.0/24`
+  - Training Tools Subnet: `10.0.2.0/24`
+  - Active Directory Subnet (Optional): `10.0.3.0/24`
+  - Docker Containers Subnet (Optional): `10.0.4.0/24`
+
+#### 2. Navigate to the VPC dashboard and create a new VPC
+
+- **Access the VPC Dashboard**: Log into the AWS Management Console, navigate to the "Services" menu, and select "VPC" under the "Networking & Content Delivery" category.
+- **Launch VPC Wizard**: Click on "Launch VPC Wizard" to start the VPC creation process.
+- **VPC Configuration**:
+  - Choose "VPC with a Single Public Subnet" for simplicity or "VPC with Public and Private Subnets" for more complex setups.
+  - Enter the VPC CIDR block and subnet CIDR as designed in the previous step.
+  - Name your VPC and subnets for easy identification (e.g., "CyberSecLab-VPC" and "CyberSecLab-PublicSubnet").
+  - Configure other options as necessary, such as enabling DNS hostname and DNS resolution.
+- **Create VPC**: Review your configurations and click "Create VPC" to establish your new VPC.
 
 ### Subnet Creation
 

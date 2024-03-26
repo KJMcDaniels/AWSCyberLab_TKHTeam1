@@ -1,6 +1,39 @@
 # Multi-Subnet Cybersecurity Training Lab Setup on AWS
 > Authors: Emmanuel Apiteu, Zedd Chisholm (Team Lead), KJ McDaniels, Opeyemi Olaleye, Yonisbel Soto (Project Manager)
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Initial Setup and Configuration](#initial-setup-and-configuration)
+  - [AWS Account Preparation](#aws-account-preparation)
+  - [Environment Setup](#environment-setup)
+- [VPC and Networking Configuration](#vpc-and-networking-configuration)
+  - [VPC Creation](#vpc-creation)
+    - [1. Design the CIDR blocks for your VPC and subnets](#1-design-the-cidr-blocks-for-your-vpc-and-subnets)
+    - [2. Navigate to the VPC dashboard and create a new VPC](#2-navigate-to-the-vpc-dashboard-and-create-a-new-vpc)
+  - [Subnet Creation](#subnet-creation)
+  - [Internet Gateway and Route Tables](#internet-gateway-and-route-tables)
+- [Security Configurations](#security-configurations)
+  - [Security Groups and ACLs](#security-groups-and-acls)
+  - [IAM Policies for Resource Access](#iam-policies-for-resource-access)
+- [Instance Management](#instance-management)
+  - [EC2 Instance Launch](#ec2-instance-launch)
+  - [Instance Networking and Security](#instance-networking-and-security)
+- [AWS Security Services Integration](#aws-security-services-integration)
+  - [Amazon GuardDuty](#amazon-guardduty)
+  - [Amazon Inspector](#amazon-inspector)
+  - [AWS WAF](#aws-waf)
+  - [Amazon CloudWatch](#amazon-cloudwatch)
+- [Testing and Validation](#testing-and-validation)
+- [Troubleshooting and Optimization](#troubleshooting-and-optimization)
+- [Documentation and Collaboration](#documentation-and-collaboration)
+- [Conclusion and Next Steps](#conclusion-and-next-steps)
+- [Appendices](#appendices)
+  - [A: AWS CLI and SDK Examples](#a-aws-cli-and-sdk-examples)
+  - [B: Useful AWS Documentation and Resources](#b-useful-aws-documentation-and-resources)
+  - [C: Glossary of Terms](#c-glossary-of-terms)
+- [References](#references)
+
 ## Introduction
 
 This document serves as a guide for setting up a multi-subnet cybersecurity training lab within AWS. The lab is designed to provide hands-on experience with securing cloud infrastructure using AWS's native security services. This README outlines the steps to configure a VPC with multiple subnets, security groups, and AWS security services for a comprehensive cybersecurity training environment.
@@ -90,7 +123,21 @@ This document serves as a guide for setting up a multi-subnet cybersecurity trai
 
 ### Amazon CloudWatch
 
-- Utilize CloudWatch for logging and monitoring of your lab environment.
+Amazon CloudWatch is an essential tool for logging and monitoring your EC2 instances. By configuring CloudWatch, you can collect logs from your EC2 instances and gain insights into their performance and behavior. Follow these steps to set up logging for an EC2 instance with CloudWatch:
+
+1. **Create the IAM Role Necessary to Run the CloudWatch Agent on EC2 Instances**: Create an IAM role with the necessary permissions to allow the EC2 instance to send logs to CloudWatch. The role should have the `CloudWatchAgentServerPolicy` managed policy attached.
+
+2. **Download and Configure the CloudWatch Agent Using the Command Line**: Download the CloudWatch agent package for the EC2 instance. Find detailed instructions in the [CloudWatch Agent documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/download-cloudwatch-agent-commandline.html).
+
+3. **Installing and Running the CloudWatch Agent on the EC2 Servers**: Attach the IAM role to the server that will run the agent. Install the agent package and start using the agent configuration create. Find detailed instructions in the [CloudWatch Agent documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/download-cloudwatch-agent-commandline.html).
+
+4. **Verify Logs in CloudWatch Console**: Once the agent is installed and configured, verify that logs are being sent to CloudWatch by checking the CloudWatch Logs section in the AWS Management Console.
+
+5. **Set Up Alarms**: Create CloudWatch alarms to monitor specific metrics and trigger notifications or automated actions based on predefined thresholds.
+
+<!-- 6. **Create Dashboards**: Build custom CloudWatch dashboards to visualize key metrics and logs from your EC2 instances. -->
+
+For more information on CloudWatch, refer to the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html).
 
 ## Testing and Validation
 

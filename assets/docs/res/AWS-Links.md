@@ -17,3 +17,5 @@
 ### Bastion Host
 - [Linux Bastion Hosts on AWS Partner Solution Deployment Guide](https://aws-ia.github.io/cfn-ps-linux-bastion/)
 - [Linux Bastion Host on AWS](https://aws.amazon.com/solutions/implementations/linux-bastion/)
+- [AWS Linux Bastion Host Template](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create?stackName=quickstart-linux-bastion&templateURL=https://aws-ia-us-east-1.s3.us-east-1.amazonaws.com/cfn-ps-linux-bastion/templates/linux-bastion-entrypoint-existing-vpc.template.yaml)
+  

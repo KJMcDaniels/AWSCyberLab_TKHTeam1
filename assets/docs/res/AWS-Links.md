@@ -9,3 +9,7 @@
 <!-- - [AWS CloudTrail Pricing](https://aws.amazon.com/cloudtrail/pricing/) -->
 ### CloudWatch Pricing
 - [AWS CloudWatch Pricing](httpshttps://aws.amazon.com/cloudwatch/pricing/://aws.amazon.com/cloudwatch/pricing/)
+
+### VPC Networking
+- [Configuring your Subnet](https://docs.aws.amazon.com/vpc/latest/userguide/modify-subnets.html#subnet-public-ip)
+- [AWS EC2 IP Addressing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html) 

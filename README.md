@@ -111,8 +111,36 @@ This document serves as a guide for setting up a multi-subnet cybersecurity trai
 
 ### Enable Amazon GuardDuty
 
-1. **Enable Service**: Access [GuardDuty console](https://console.aws.amazon.com/guardduty/) and click 'Get Started', then 'Enable GuardDuty'.
-2. **Automatic Monitoring**: Once enabled, GuardDuty starts monitoring and analyzing AWS environment activity without additional data source configuration.
+![AWS GuardDuty](assets/imgs/Guard-Duty-Finds-Portscan-01.jpg "Our AWS GuardDuty Dashboard")
+
+Amazon GuardDuty is a threat detection service that offers continuous monitoring and protection for your AWS accounts and workloads. To enable GuardDuty, follow the steps below:
+
+1. **Access GuardDuty Console**:
+   - Navigate to the AWS Management Console and open the [GuardDuty console](https://console.aws.amazon.com/guardduty/).
+   - Click on 'Get Started'.
+
+2. **Enable GuardDuty Service**:
+   - Review the introduction information provided by GuardDuty.
+   - Click on 'Enable GuardDuty' to activate the service.
+
+3. **Automatic Monitoring**:
+   - GuardDuty starts analyzing and monitoring your AWS environment as soon as it is enabled, using data sources like AWS CloudTrail, VPC Flow Logs, and DNS logs to detect suspicious activities.
+
+4. **Set Up Permissions**:
+   - The service will create a service-linked role named `AWSServiceRoleForAmazonGuardDuty` that provides it with the necessary permissions to access your logs and metrics.
+
+5. **Configure Additional Settings (Optional)**:
+   - You may choose to customize GuardDuty settings by adding trusted IP lists or threat lists.
+   - Configure GuardDuty to publish findings to Amazon CloudWatch Events for triggering responses or notifications.
+
+6. **Validate Configuration**:
+   - Generate and review sample findings in the GuardDuty console under 'Settings' by clicking 'Generate sample findings' to ensure proper setup.
+
+7. **Monitoring and Maintenance**:
+   - Regularly review findings and alerts from GuardDuty.
+   - Implement additional alerts or notifications as required for comprehensive security monitoring.
+
+Regular updates and reviews of GuardDuty configurations are recommended to keep up with new threats and changing AWS environments.
 
 ### Generate Sample Findings
 
@@ -145,7 +173,11 @@ This document serves as a guide for setting up a multi-subnet cybersecurity trai
 
 ### Amazon CloudWatch
 
-Amazon CloudWatch is an essential tool for logging and monitoring your EC2 instances. By configuring CloudWatch, you can collect logs from your EC2 instances and gain insights into their performance and behavior. Follow these steps to set up logging for an EC2 instance with CloudWatch:
+Amazon CloudWatch is an essential tool for logging and monitoring your EC2 instances. By configuring CloudWatch, you can collect logs from your EC2 instances and gain insights into their performance and behavior. 
+
+![AWS CloudWatch Ec2 Metrics](assets/imgs/CloudWatch-EC2-Metrics.jpg "AWS CloudWatch EC2 Metrics")
+
+Follow these steps to set up logging for an EC2 instance with CloudWatch:
 
 1. **Create the IAM Role Necessary to Run the CloudWatch Agent on EC2 Instances**: Create an IAM role with the necessary permissions to allow the EC2 instance to send logs to CloudWatch. The role should have the `CloudWatchAgentServerPolicy` managed policy attached.
 
@@ -164,6 +196,27 @@ For more information on CloudWatch, refer to the [Amazon CloudWatch User Guide](
 ## Testing and Validation
 
 - Conduct network connectivity tests and validate the configuration of AWS security services.
+
+### Port Scanning and Exploitation with Kali Linux
+![nmap Port Scan w/ Kali Lunix](assets/imgs/Kali-atk-win-nmap-scan-01.jpg "Kali Lunix nmap scan of Victim Machine")
+
+In the process of testing our lab's security, we utilized Kali Linux, a powerful tool for cybersecurity experts, to conduct a port scan against the victim machine. Here's a brief overview of the steps we took:
+
+1. **Conducting Port Scan with Nmap**:
+   - We ran an Nmap scan to discover open ports on the victim machine.
+   - The command used was `nmap <victim-ip-address>`.
+   - Initially, Nmap reported the host as down due to the lack of responses to ping probes.
+   - We then executed `nmap -Pn <victim-ip-address>` to treat the host as up and bypass ping scanning, which revealed open ports.
+
+2. **Identifying Vulnerable Services**:
+   - The Nmap scan identified a service running on port 3389/tcp known for RDP (Remote Desktop Protocol), a potential point of entry.
+
+3. **Exploitation Using Metasploit**:
+   - With the open ports and services identified, we launched Metasploit, a widely used framework for exploit development and execution.
+   - We targeted the services discovered during the Nmap scan to attempt to exploit known vulnerabilities.
+
+This process highlighted the importance of regular vulnerability scanning within network environments and served as a practical exercise in identifying and mitigating potential security threats.
+
 
 ## Troubleshooting and Optimization
 

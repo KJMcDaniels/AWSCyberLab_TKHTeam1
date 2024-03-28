@@ -21,3 +21,8 @@
   
 ### AWS Guard Duty
 - [Getting Started with Guard Duty](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_settingup.html)
+- [How to Enable AWS GuardDuty](https://www.youtube.com/watch?v=lLgqP4cbdWg)
+
+### Troubleshooting
+- [EC2 SSH Error](https://repost.aws/questions/QUXwRRF1F1Slu6Dx7sG8rBJg/ec2-error-establishing-ssh-connection-to-your-instance-please-wait-and-try-again-later)
+- 

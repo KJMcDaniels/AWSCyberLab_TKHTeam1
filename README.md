@@ -1,5 +1,5 @@
 # Multi-Subnet Cybersecurity Training Lab Setup on AWS
-> Authors: Emmanuel Apiteu, Zedd Chisholm (Team Lead), KJ McDaniels, Opeyemi Olaleye, Yonisbel Soto (Project Manager)
+> Authors: Emmanuel Apiteu, Zedd Chisholm (Team Lead), Abraham DeLaCruz, KJ McDaniels, Opeyemi Olaleye, Alawi Raashed, Yonisbel Soto (Project Manager)
 
 ## Table of Contents
 

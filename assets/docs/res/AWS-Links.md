@@ -13,6 +13,7 @@
 ### VPC Networking
 - [Configuring your Subnet](https://docs.aws.amazon.com/vpc/latest/userguide/modify-subnets.html#subnet-public-ip)
 - [AWS EC2 IP Addressing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html)
+- [VPC log Endpoints](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch-logs-and-interface-VPC.html)
 
 ### Bastion Host
 - [Linux Bastion Hosts on AWS Partner Solution Deployment Guide](https://aws-ia.github.io/cfn-ps-linux-bastion/)

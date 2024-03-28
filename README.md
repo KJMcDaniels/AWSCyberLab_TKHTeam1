@@ -109,9 +109,31 @@ This document serves as a guide for setting up a multi-subnet cybersecurity trai
 
 ## AWS Security Services Integration
 
-### Amazon GuardDuty
+### Enable Amazon GuardDuty
 
-- Enable GuardDuty for automatic threat detection.
+1. **Enable Service**: Access [GuardDuty console](https://console.aws.amazon.com/guardduty/) and click 'Get Started', then 'Enable GuardDuty'.
+2. **Automatic Monitoring**: Once enabled, GuardDuty starts monitoring and analyzing AWS environment activity without additional data source configuration.
+
+### Generate Sample Findings
+
+1. **Generate Findings**: Within the GuardDuty console, navigate to 'Settings', under 'Sample findings', select 'Generate sample findings'.
+2. **Review Findings**: Check the 'Findings' section for samples marked with `[SAMPLE]`.
+
+### Export Findings to Amazon S3 Bucket (Optional)
+
+1. **Create S3 Bucket**: Set up S3 export settings from GuardDuty settings for long-term findings storage.
+2. **Create KMS Key**: Establish a new KMS key for encryption via [AWS KMS console](https://console.aws.amazon.com/kms).
+
+### Set Up Alerts with Amazon SNS (Optional)
+
+1. **Create SNS Topic**: Create a new topic named 'GuardDuty' in the [Amazon SNS console](https://console.aws.amazon.com/sns/v3/home).
+2. **Create EventBridge Rule**: Use [EventBridge console](https://console.aws.amazon.com/events/) to make a rule that sends GuardDuty findings to the SNS topic.
+
+### Next Steps
+
+- **Investigate Findings**: Examine findings for security insights and take action as necessary.
+- **Fine-tuning**: Implement filters for findings and suppression rules for expected behaviors.
+- **IP Lists Management**: Utilize trusted IP lists for customized monitoring.
 
 ### Amazon Inspector
 

@@ -187,3 +187,5 @@ This README provides a foundational guide for setting up a multi-subnet cybersec
 ### C: Glossary of Terms
 
 ## References
+
+Please view our references on our [AWS Links](/assets/docs/res/AWS-Links.md) reference document.

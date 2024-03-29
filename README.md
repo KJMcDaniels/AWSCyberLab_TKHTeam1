@@ -24,8 +24,7 @@
 9. [Documentation and Collaboration](#documentation-and-collaboration)
 10. [Conclusion and Next Steps](#conclusion-and-next-steps)
 11. [Appendices](#appendices)
-    - [A: AWS CLI and SDK Examples](#a-aws-cli-and-sdk-examples)
-    - [B: Glossary of Terms](#b-glossary-of-terms)
+    - [A: Glossary of Terms](#b-glossary-of-terms)
 12. [References](#references)
 
 ## Introduction
@@ -155,11 +154,59 @@ Regular updates and reviews of GuardDuty configurations are recommended to keep 
 
 ### Amazon Inspector
 
-- Configure Amazon Inspector to scan your instances for vulnerabilities.
+Amazon Inspector is an automated security assessment service that helps to identify potential security issues within your AWS resources. It can automatically assess applications for vulnerabilities or deviations from best practices, and it produces detailed security findings.
+
+#### Configuring Amazon Inspector
+
+1. **Enable Amazon Inspector**:
+   - Navigate to the Amazon Inspector console within the AWS Management Console.
+   - Select 'First-time setup' and follow the prompts to define the assessment target.
+
+2. **Define Assessment Target**:
+   - Set up an assessment target by selecting the AWS resources you want to assess, typically based on tags assigned to your EC2 instances or the entire VPC.
+
+3. **Create an Assessment Template**:
+   - Create an assessment template, which includes the target, the rules packages to evaluate, and the duration for the assessment run.
+
+4. **Run the Assessment**:
+   - Start the assessment run. Amazon Inspector will analyze the behavior of the instances and the network configuration.
+
+5. **Review Findings**:
+   - Once the assessment is complete, review the findings under the 'Findings' section of the Amazon Inspector console.
+   - Findings include a description of the issue, its severity, and recommendations for mitigation.
+
+6. **Integrate with AWS Services** (Optional):
+   - Utilize other AWS services such as AWS Lambda, SNS, or CloudWatch Events to automate responses to specific findings.
 
 ### AWS WAF
 
-- Set up AWS WAF to protect your web applications.
+AWS WAF is a web application firewall service that helps to protect your web applications from common web exploits that could affect application availability, compromise security, or consume excessive resources.
+
+#### Setting up AWS WAF
+
+1. **Go to AWS WAF & Shield**:
+   - Access the AWS WAF & Shield console through the AWS Management Console.
+
+2. **Create a Web ACL**:
+   - Click 'Create web ACL' and define a name and a resource (such as an Application Load Balancer, API Gateway, or CloudFront distribution) to associate with the web ACL.
+
+3. **Configure Rules**:
+   - Configure rules to block or allow requests based on various criteria, including IP addresses, HTTP headers, HTTP body, or custom URIs.
+
+4. **Set up Rule Actions**:
+   - Define actions for each rule - either block, allow, or count the requests that match the rule's criteria.
+
+5. **Deploy the Web ACL**:
+   - Review the configurations and deploy the web ACL to the selected resource.
+
+6. **Monitor Requests**:
+   - Monitor the requests that are allowed or blocked by AWS WAF by using Amazon CloudWatch metrics.
+
+7. **Fine-tuning** (Optional):
+   - As you monitor, fine-tune your rules to minimize false positives and ensure legitimate traffic is not inadvertently blocked.
+
+For detailed instructions and best practices on setting up and managing AWS Inspector and AWS WAF, consult the official AWS documentation.
+
 
 ### Amazon CloudWatch
 
@@ -255,9 +302,7 @@ With the foundational setup of our AWS-based cybersecurity training lab complete
 
 ## Appendices
 
-### A: AWS CLI and SDK Examples
-
-### B: Glossary of Terms
+### A: Glossary of Terms
 
 | Term | Definition |
 |------|------------|

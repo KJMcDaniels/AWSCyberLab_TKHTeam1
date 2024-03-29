@@ -24,7 +24,7 @@
 9. [Documentation and Collaboration](#documentation-and-collaboration)
 10. [Conclusion and Next Steps](#conclusion-and-next-steps)
 11. [Appendices](#appendices)
-    - [A: Glossary of Terms](#b-glossary-of-terms)
+    - [A: Glossary of Terms](#a-glossary-of-terms)
 12. [References](#references)
 
 ## Introduction

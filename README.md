@@ -238,21 +238,75 @@ This process highlighted the importance of regular vulnerability scanning within
 
 ## Documentation and Collaboration
 
-- Maintain thorough documentation of all setup processes and configurations.
-- Utilize collaboration tools effectively to manage the project.
+A rigorous approach to documentation and collaboration has been central to the lab's successful setup and operation:
+
+### Documenting Every Step:
+
+- Thoroughly documented the setup process, configurations, and any issues encountered along with their resolutions in a shared repository.
+- Maintained clear and descriptive commit messages and documentation updates to provide context and rationale for changes.
+
+### Collaboration Tools:
+
+- Utilized Git for version control, allowing for coordinated and trackable team contributions.
+- Employed project management and communication tools to facilitate clear and efficient task delegation and status tracking among team members.
 
 ## Conclusion and Next Steps
 
-This README provides a foundational guide for setting up a multi-subnet cybersecurity training lab in AWS. Following these steps will help you create a secure and functional environment for cybersecurity training purposes.
+With the foundational setup of our AWS-based cybersecurity training lab complete, we are poised to enter the next phase. We plan to:
+
+- Introduce more advanced threat scenarios and simulate responses.
+- Continuously improve our security posture by integrating the latest AWS services and features.
+- Conduct regular training sessions to keep the team adept at recognizing and responding to the latest cybersecurity threats.
+
+### Future Improvement Ideas
+- **Adding a Bastion Host:** Enhances network segmentation and provides a controlled environment for sensitive operations away from public access.
+- **Integrating Advanced Security Features:** Utilize services like AWS Shield for DDoS protection and AWS Key Management Service for secure key storage.
+- **Using additional Managed Tools:** Incorporate advanced AWS services such as AWS Systems Manager for streamlined management and automation.
 
 ## Appendices
 
 ### A: AWS CLI and SDK Examples
 
-### B: Useful AWS Documentation and Resources
+### B: Glossary of Terms
 
-### C: Glossary of Terms
+**Amazon CloudWatch**: A monitoring service for AWS cloud resources and the applications you run on AWS.
+
+**Amazon GuardDuty**: A threat detection service that continuously monitors for malicious activity and unauthorized behavior.
+
+**Amazon Inspector**: An automated security assessment service that helps improve the security and compliance of applications deployed on AWS.
+
+**Amazon VPC**: Amazon Virtual Private Cloud lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
+
+**CIDR Block**: Classless Inter-Domain Routing. An IP addressing scheme that improves the allocation of IP addresses.
+
+**EC2**: Amazon Elastic Compute Cloud. A web service that provides secure, resizable compute capacity in the cloud.
+
+**IAM**: AWS Identity and Access Management. It helps you securely control access to AWS resources.
+
+**Internet Gateway**: A VPC component that allows communication between instances in your VPC and the internet.
+
+**NACL**: Network Access Control List. An optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets.
+
+**Port Scanning**: Using a network tool like Nmap to scan a computer for open ports.
+
+**RDP**: Remote Desktop Protocol. A proprietary protocol developed by Microsoft that provides a user with a graphical interface to connect to another computer over a network connection.
+
+**Route Table**: A set of rules, called routes, that determine where network traffic from your subnet or gateway is directed.
+
+**Security Group**: A virtual firewall for an instance to control inbound and outbound traffic.
+
+**SSH**: Secure Shell. A cryptographic network protocol for operating network services securely over an unsecured network.
+
+**Subnet**: A range of IP addresses in your VPC.
+
+**VPC**: Virtual Private Cloud. An isolated section of the AWS cloud where you can launch resources in a virtual network that you define.
+
+**WAF**: Web Application Firewall. Helps protect your web applications from common web exploits.
+
+**AWS CLI**: AWS Command Line Interface. A unified tool to manage your AWS services.
+
+**SDK**: Software Development Kit. A collection of software tools and libraries for creating applications for a specific device or operating system.
 
 ## References
 
-Please view our references on our [AWS Links](/assets/docs/res/AWS-Links.md) reference document.
+Please view our references on our [AWS Links](/assets/docs/res/AWS-Links.md) reference document. Here you can find additional link to useful AWS Documentation and Resources.

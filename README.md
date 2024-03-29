@@ -220,7 +220,21 @@ This process highlighted the importance of regular vulnerability scanning within
 
 ## Troubleshooting and Optimization
 
-- Address common setup issues and apply best practices for performance and security.
+### Common Issues and Solutions
+
+- **SSH Connectivity Issues**:
+  - Confirmed that the Internet Gateway was correctly attached to the VPC.
+  - Reviewed and updated route tables to ensure proper routing for SSH traffic.
+  - Validated security group rules to allow SSH access (port 22) from the appropriate IP ranges.
+
+- **Performance Optimization**:
+  - Monitored resource usage to identify and alleviate bottlenecks.
+  - Optimized instance sizes and types based on performance data.
+  - Implemented scaling policies to handle variable load efficiently.
+
+- **Security Best Practices**:
+  - Continuously updated and refined Security Groups and Network ACLs to enforce the principle of least privilege.
+  - Regularly audited our environment using AWS security tools to preemptively identify and mitigate potential security issues.
 
 ## Documentation and Collaboration
 

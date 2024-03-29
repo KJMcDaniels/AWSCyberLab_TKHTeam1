@@ -263,43 +263,27 @@ With the foundational setup of our AWS-based cybersecurity training lab complete
 
 ### B: Glossary of Terms
 
-**Amazon CloudWatch**: A monitoring service for AWS cloud resources and the applications you run on AWS.
-
-**Amazon GuardDuty**: A threat detection service that continuously monitors for malicious activity and unauthorized behavior.
-
-**Amazon Inspector**: An automated security assessment service that helps improve the security and compliance of applications deployed on AWS.
-
-**Amazon VPC**: Amazon Virtual Private Cloud lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
-
-**CIDR Block**: Classless Inter-Domain Routing. An IP addressing scheme that improves the allocation of IP addresses.
-
-**EC2**: Amazon Elastic Compute Cloud. A web service that provides secure, resizable compute capacity in the cloud.
-
-**IAM**: AWS Identity and Access Management. It helps you securely control access to AWS resources.
-
-**Internet Gateway**: A VPC component that allows communication between instances in your VPC and the internet.
-
-**NACL**: Network Access Control List. An optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets.
-
-**Port Scanning**: Using a network tool like Nmap to scan a computer for open ports.
-
-**RDP**: Remote Desktop Protocol. A proprietary protocol developed by Microsoft that provides a user with a graphical interface to connect to another computer over a network connection.
-
-**Route Table**: A set of rules, called routes, that determine where network traffic from your subnet or gateway is directed.
-
-**Security Group**: A virtual firewall for an instance to control inbound and outbound traffic.
-
-**SSH**: Secure Shell. A cryptographic network protocol for operating network services securely over an unsecured network.
-
-**Subnet**: A range of IP addresses in your VPC.
-
-**VPC**: Virtual Private Cloud. An isolated section of the AWS cloud where you can launch resources in a virtual network that you define.
-
-**WAF**: Web Application Firewall. Helps protect your web applications from common web exploits.
-
-**AWS CLI**: AWS Command Line Interface. A unified tool to manage your AWS services.
-
-**SDK**: Software Development Kit. A collection of software tools and libraries for creating applications for a specific device or operating system.
+| Term | Definition |
+|------|------------|
+| Amazon CloudWatch | A monitoring service for AWS cloud resources and the applications you run on AWS. |
+| Amazon GuardDuty | A threat detection service that continuously monitors for malicious activity and unauthorized behavior. |
+| Amazon Inspector | An automated security assessment service that helps improve the security and compliance of applications deployed on AWS. |
+| Amazon VPC | Amazon Virtual Private Cloud lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network. |
+| CIDR Block | Classless Inter-Domain Routing. An IP addressing scheme that improves the allocation of IP addresses. |
+| EC2 | Amazon Elastic Compute Cloud. A web service that provides secure, resizable compute capacity in the cloud. |
+| IAM | AWS Identity and Access Management. It helps you securely control access to AWS resources. |
+| Internet Gateway | A VPC component that allows communication between instances in your VPC and the internet. |
+| NACL | Network Access Control List. An optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. |
+| Port Scanning | Using a network tool like Nmap to scan a computer for open ports. |
+| RDP | Remote Desktop Protocol. A proprietary protocol developed by Microsoft that provides a user with a graphical interface to connect to another computer over a network connection. |
+| Route Table | A set of rules, called routes, that determine where network traffic from your subnet or gateway is directed. |
+| Security Group | A virtual firewall for an instance to control inbound and outbound traffic. |
+| SSH | Secure Shell. A cryptographic network protocol for operating network services securely over an unsecured network. |
+| Subnet | A range of IP addresses in your VPC. |
+| VPC | Virtual Private Cloud. An isolated section of the AWS cloud where you can launch resources in a virtual network that you define. |
+| WAF | Web Application Firewall. Helps protect your web applications from common web exploits. |
+| AWS CLI | AWS Command Line Interface. A unified tool to manage your AWS services. |
+| SDK | Software Development Kit. A collection of software tools and libraries for creating applications for a specific device or operating system. |
 
 ## References
 

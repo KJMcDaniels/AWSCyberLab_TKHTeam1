@@ -177,6 +177,12 @@ Amazon Inspector is an automated security assessment service that helps to ident
 
 6. **Integrate with AWS Services** (Optional):
    - Utilize other AWS services such as AWS Lambda, SNS, or CloudWatch Events to automate responses to specific findings.
+  
+7. **On-Demand Scan** (Optional):
+   - Navigate to Inspector CIS Scans and select "Create New Scan" in order to create an on-Bemand scan. For Example:
+     ![Create New Scan](assets/imgs/Inscpector-CIS-Create-Scan-02.jpg "Create a New Scan")
+  
+   ![AWS Inspector On-Demand Scan Results](assets/imgs/Inspector-Scan-Results-01.jpg "Inspector On-Demand Scan Results")
 
 ### AWS WAF
 
